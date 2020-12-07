@@ -10,7 +10,7 @@ const app = express()
 dbConnection()
 
 //CORS
-// app.use(cors)
+app.use(cors())
 
 //Folder Public
 app.use(express.static('public'))
