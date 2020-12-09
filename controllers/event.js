@@ -17,7 +17,7 @@ const getEvents = async (req, res = response) => {
             })
         }
 
-        res.status(401).json({
+        await res.json({
             ok: true,
             msg: events
         })
@@ -41,7 +41,7 @@ const createEvent = async (req, res = express.response) => {
         event.user = req.uid
         await event. save()
 
-        res.status(401).json({
+        res.json({
             ok: true,
             msg: event
         })
